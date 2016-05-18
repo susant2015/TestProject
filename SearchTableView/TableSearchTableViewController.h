@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableSearchTableViewController.h
 //  SearchTableView
 //
 //  Created by admin on 18/05/16.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface TableSearchTableViewController : UITableViewController
 @property (nonatomic, strong) NSArray *tableData;
 @property (nonatomic, strong) NSMutableArray *searchResult;
-
 @end
-

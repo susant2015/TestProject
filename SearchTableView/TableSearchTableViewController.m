@@ -1,22 +1,20 @@
 //
-//  ViewController.m
+//  TableSearchTableViewController.m
 //  SearchTableView
 //
 //  Created by admin on 18/05/16.
 //  Copyright © 2016 Xigmapro. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TableSearchTableViewController.h"
 
-@interface ViewController ()<UISearchDisplayDelegate>
+@interface TableSearchTableViewController ()<UISearchDisplayDelegate>
 
 @end
 
-@implementation ViewController
-
+@implementation TableSearchTableViewController
 @synthesize tableData;
 @synthesize searchResult;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -74,4 +72,5 @@
     
     return cell;
 }
+
 @end

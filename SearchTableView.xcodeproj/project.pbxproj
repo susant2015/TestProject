@@ -15,6 +15,7 @@
 		84F4AECF1CECA82C00ED37EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F4AECD1CECA82C00ED37EE /* LaunchScreen.storyboard */; };
 		84F4AEDA1CECA82D00ED37EE /* SearchTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F4AED91CECA82D00ED37EE /* SearchTableViewTests.m */; };
 		84F4AEE51CECA82D00ED37EE /* SearchTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F4AEE41CECA82D00ED37EE /* SearchTableViewUITests.m */; };
+		84F4AEF41CECABCB00ED37EE /* TableSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F4AEF31CECABCB00ED37EE /* TableSearchTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		84F4AEE01CECA82D00ED37EE /* SearchTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F4AEE41CECA82D00ED37EE /* SearchTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewUITests.m; sourceTree = "<group>"; };
 		84F4AEE61CECA82D00ED37EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F4AEF21CECABCB00ED37EE /* TableSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSearchTableViewController.h; sourceTree = "<group>"; };
+		84F4AEF31CECABCB00ED37EE /* TableSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableSearchTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				84F4AECD1CECA82C00ED37EE /* LaunchScreen.storyboard */,
 				84F4AED01CECA82C00ED37EE /* Info.plist */,
 				84F4AEBF1CECA82C00ED37EE /* Supporting Files */,
+				84F4AEF21CECABCB00ED37EE /* TableSearchTableViewController.h */,
+				84F4AEF31CECABCB00ED37EE /* TableSearchTableViewController.m */,
 			);
 			path = SearchTableView;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F4AEF41CECABCB00ED37EE /* TableSearchTableViewController.m in Sources */,
 				84F4AEC71CECA82C00ED37EE /* ViewController.m in Sources */,
 				84F4AEC41CECA82C00ED37EE /* AppDelegate.m in Sources */,
 				84F4AEC11CECA82C00ED37EE /* main.m in Sources */,
