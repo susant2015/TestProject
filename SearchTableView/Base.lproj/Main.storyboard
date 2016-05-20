@@ -17,32 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pWj-79-g7Z">
-                                <rect key="frame" x="0.0" y="103" width="600" height="497"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-jt-D2H">
+                                <rect key="frame" x="0.0" y="128" width="600" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1q8-lG-kEL"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Z99-7X-AjN"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="aIo-Q8-teg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B5O-gi-qoM"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vL-lk-8hV">
-                                <rect key="frame" x="0.0" y="54" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
-                            </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evN-Be-xbf">
-                                <rect key="frame" x="236" y="20" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-XJ-xh9">
+                                <rect key="frame" x="0.0" y="53" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <segue destination="iCM-El-QcW" kind="show" id="hPi-49-5nh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iU6-04-xd3"/>
                                 </connections>
-                            </button>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mySearch" destination="ZKT-XJ-xh9" id="R2E-mo-mf8"/>
+                        <outlet property="myTableView" destination="qEJ-jt-D2H" id="kqd-EY-eWu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="405" y="401"/>
+            <point key="canvasLocation" x="374" y="431"/>
         </scene>
         <!--Table Search Table View Controller-->
         <scene sceneID="mzt-wa-LRg">
@@ -57,7 +57,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="j54-zB-rO2" id="qF4-5M-LOB"/>
+                                <outlet property="delegate" destination="j54-zB-rO2" id="34i-PQ-uwv"/>
                             </connections>
                         </searchBar>
                         <prototypes>

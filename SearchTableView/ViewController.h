@@ -9,8 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, strong) NSArray *tableData;
-@property (nonatomic, strong) NSMutableArray *searchResult;
+{
+     NSMutableArray *totalStrimg;
+     NSMutableArray *filterString;
+    NSMutableArray *filterString2;
+     NSMutableArray *strNumber;
+     BOOL isFilletered;
+
+     IBOutlet UISearchBar *mySearch;
+     IBOutlet UITableView *myTableView;
+    
+}
 
 @end
 

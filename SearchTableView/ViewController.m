@@ -7,71 +7,93 @@
 //
 
 #import "ViewController.h"
+#import "TableViewCell.h"
 
-@interface ViewController ()<UISearchDisplayDelegate>
+@interface ViewController ()<UISearchBarDelegate>
 
 @end
 
 @implementation ViewController
 
-@synthesize tableData;
-@synthesize searchResult;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableData = @[@"One",@"Two",@"Three",@"Twenty-one"];
-    self.searchResult = [NSMutableArray arrayWithCapacity:[self.tableData count]];
+    totalStrimg = [[NSMutableArray alloc] initWithObjects:@"one",@"two",@"three",@"four",@"five",@"six", nil];
+    strNumber=[[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6", nil];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-{
-    [self.searchResult removeAllObjects];
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@", searchText];
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
-    self.searchResult = [NSMutableArray arrayWithArray: [self.tableData filteredArrayUsingPredicate:resultPredicate]];
+    if (searchText.length==0) {
+        isFilletered=NO;
+    }
+    else{
+        
+        isFilletered=YES;
+        filterString=[[NSMutableArray alloc]  init];
+        filterString2=[[NSMutableArray alloc]  init];
+        for (NSString *str in totalStrimg) {
+            
+            NSRange stringRange=[str rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (stringRange.location !=NSNotFound) {
+                [filterString addObject:str];
+            }
+        }
+        
+        for (NSString *str in strNumber) {
+            
+            NSRange stringRange=[str rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (stringRange.location !=NSNotFound) {
+                [filterString2 addObject:str];
+            }
+        }
+    }
+    [myTableView reloadData];
 }
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return YES;
+    return 1;
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    if (isFilletered) {
+        return [filterString count];
+    }
+    return [totalStrimg count];
+}
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    
+    [myTableView resignFirstResponder];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (tableView == self.searchDisplayController.searchResultsTableView)
-    {
-        return [self.searchResult count];
+    UITableViewCell *myCell=nil;
+    
+    static NSString *applicantIndexCellIdentifier=@"TableViewCell";
+    TableViewCell *cell=(TableViewCell *)[tableView dequeueReusableCellWithIdentifier:applicantIndexCellIdentifier];
+    if (!cell) {
+        cell=[[[NSBundle mainBundle] loadNibNamed:@"TableViewCell" owner:self options:nil]objectAtIndex:0];
     }
-    else
+    
+    if (isFilletered)
     {
-        return [self.tableData count];
+         cell.lblNumbers.text = [filterString objectAtIndex:indexPath.row];
+        //cell.lblNum.text = [filterString2 objectAtIndex:indexPath.row];
     }
+    else{
+
+      cell.lblNumbers.text = [totalStrimg objectAtIndex:indexPath.row];
+      cell.lblNum.text=[strNumber objectAtIndex:indexPath.row];
+    }
+    myCell=cell;
+    return cell;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    if (tableView == self.searchDisplayController.searchResultsTableView)
-    {
-        cell.textLabel.text = [self.searchResult objectAtIndex:indexPath.row];
-    }
-    else
-    {
-        cell.textLabel.text = self.tableData[indexPath.row];
-    }
-    
-    return cell;
-}
+
 @end

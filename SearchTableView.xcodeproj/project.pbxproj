@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8424A3881CEDB412003FDE01 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8424A3861CEDB412003FDE01 /* TableViewCell.m */; };
+		8424A3891CEDB412003FDE01 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8424A3871CEDB412003FDE01 /* TableViewCell.xib */; };
 		84F4AEC11CECA82C00ED37EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F4AEC01CECA82C00ED37EE /* main.m */; };
 		84F4AEC41CECA82C00ED37EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F4AEC31CECA82C00ED37EE /* AppDelegate.m */; };
 		84F4AEC71CECA82C00ED37EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F4AEC61CECA82C00ED37EE /* ViewController.m */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8424A3851CEDB412003FDE01 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		8424A3861CEDB412003FDE01 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		8424A3871CEDB412003FDE01 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		84F4AEBC1CECA82C00ED37EE /* SearchTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F4AEC01CECA82C00ED37EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F4AEC21CECA82C00ED37EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,6 +120,9 @@
 				84F4AEBF1CECA82C00ED37EE /* Supporting Files */,
 				84F4AEF21CECABCB00ED37EE /* TableSearchTableViewController.h */,
 				84F4AEF31CECABCB00ED37EE /* TableSearchTableViewController.m */,
+				8424A3851CEDB412003FDE01 /* TableViewCell.h */,
+				8424A3861CEDB412003FDE01 /* TableViewCell.m */,
+				8424A3871CEDB412003FDE01 /* TableViewCell.xib */,
 			);
 			path = SearchTableView;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F4AECF1CECA82C00ED37EE /* LaunchScreen.storyboard in Resources */,
+				8424A3891CEDB412003FDE01 /* TableViewCell.xib in Resources */,
 				84F4AECC1CECA82C00ED37EE /* Assets.xcassets in Resources */,
 				84F4AECA1CECA82C00ED37EE /* Main.storyboard in Resources */,
 			);
@@ -278,6 +287,7 @@
 				84F4AEF41CECABCB00ED37EE /* TableSearchTableViewController.m in Sources */,
 				84F4AEC71CECA82C00ED37EE /* ViewController.m in Sources */,
 				84F4AEC41CECA82C00ED37EE /* AppDelegate.m in Sources */,
+				8424A3881CEDB412003FDE01 /* TableViewCell.m in Sources */,
 				84F4AEC11CECA82C00ED37EE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +512,7 @@
 				84F4AEEB1CECA82D00ED37EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84F4AEEC1CECA82D00ED37EE /* Build configuration list for PBXNativeTarget "SearchTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +521,7 @@
 				84F4AEEE1CECA82D00ED37EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84F4AEEF1CECA82D00ED37EE /* Build configuration list for PBXNativeTarget "SearchTableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +530,7 @@
 				84F4AEF11CECA82D00ED37EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
